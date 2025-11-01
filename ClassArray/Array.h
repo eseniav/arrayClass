@@ -3,13 +3,14 @@
 #include <iostream>
 #include <time.h>
 #include <map>
+#include <vector>
 using namespace std;
 
 class Array
 {
 private:
-	int* mas;
-	int size;
+	vector<int> mas;
+	bool isInitialized;
 public:
 	Array();
 	Array(int _size);

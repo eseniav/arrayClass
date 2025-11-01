@@ -7,6 +7,14 @@ using namespace std;
 
 int main()
 {
+    setlocale(LC_ALL, "Russian");
     Array arr(20);
     arr.Print();
+    arr.SetRandomValues(18);
+    arr.Print();
+    arr.PrintCounts();
+    arr.SetRandomValues(5);
+    arr.Print();
+    cout << arr.Sum() << endl;
+    cout << arr.Avg() << endl;
 }
