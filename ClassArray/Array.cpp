@@ -1,68 +1,57 @@
 #include "Array.h"
 
-Array::Array() {
-	mas = NULL;
-	size = 0;
-}
-	
-Array::Array(int _size)
-{
-	Initialize(_size);
+Array::Array() : isInitialized(false) {}
+
+Array::Array(int _size) : isInitialized(false) {
+    Initialize(_size);
 }
 
-Array::~Array()
-{
-	delete[] mas;
-	size = 0;
+Array::~Array() {}
+
+void Array::Print() {
+    for (size_t i = 0; i < mas.size(); ++i) {
+        cout << mas[i] << "\t";
+    }
+    cout << endl;
 }
 
-void Array::Print()
-{
-	for (size_t i = 0; i < size; ++i) {
-		cout << mas[i] << " ";
-	}
-	cout << endl;
+int Array::Sum() {
+    int sum = 0;
+    for (size_t i = 0; i < mas.size(); ++i) {
+        sum += mas[i];
+    }
+    return sum;
 }
 
-int Array::Sum()
-{
-	int sum = 0;
-	for (size_t i = 0; i < size; ++i) {
-		sum += mas[i];
-	}
-	return sum;
-}
-
-double Array::Avg()
-{
-	return static_cast<double>(Sum()) / size;
+double Array::Avg() {
+    if (mas.empty()) return 0;
+    return static_cast<double>(Sum()) / mas.size();
 }
 
 void Array::Initialize(int _size) {
-	if (mas != NULL) {
-		delete[] mas;
-	}
+    if (!isInitialized) {
+        srand(static_cast<unsigned int>(time(NULL)));
+        isInitialized = true;
+    }
 
-	srand(time(NULL));
-	mas = new int[_size];
-	for (size_t i = 0; i < _size; i++) {
-		mas[i] = rand() % 20;
-	}
-	size = _size;
+    mas.resize(_size);
+    for (size_t i = 0; i < mas.size(); i++) {
+        mas[i] = rand() % 20;
+    }
 }
 
 void Array::SetRandomValues(int _size) {
-	Initialize(_size);
+    Initialize(_size);
 }
 
 void Array::PrintCounts() {
-	map<int, int> counts;
-	for (int i = 0; i < size; ++i) {
-		counts[mas[i]]++;
-	}
-	for (auto pair : counts) {
-		cout << "Число " << pair.first << " встречается " << pair.second << " раз\n";
-	}
+    map<int, int> counts;
+    for (int num : mas) {
+        counts[num]++;
+    }
+    for (const auto& pair : counts) {
+        cout << "Число " << pair.first << " встречается " << pair.second << " раз\n";
+    }
 }
 
 /*В класс Array нужно добавить следующие методы:
