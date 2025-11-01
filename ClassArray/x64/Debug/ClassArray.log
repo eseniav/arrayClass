@@ -1,3 +1,0 @@
-﻿  Array.cpp
-C:\Users\Vladeniya\source\repos\ClassArray\ClassArray\Array.cpp(10,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-  ClassArray.vcxproj -> C:\Users\Vladeniya\source\repos\ClassArray\x64\Debug\ClassArray.exe
