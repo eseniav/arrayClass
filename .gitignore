@@ -1,118 +1,32 @@
-
-# Игнорировать временные файлы Visual Studio
+# Временные файлы Visual Studio
 .vs/
 *.suo
 *.user
 *.userosscache
 *.sln.docstates
 
-# Игнорировать файлы сборки
+# Файлы сборки
 x64/
 Debug/
 Release/
 *.obj
-*.exe
 *.pdb
 *.ilk
 *.tlog
 *.idb
-
-# Игнорировать файлы предкомпиляции
-*.pch
-*.ipch
-
-# Игнорировать файлы автосохранения
-*~
-.#*
-
-# Компиляторные файлы
-*.obj
-*.exe
-*.dll
-*.lib
-*.pdb
-*.ilk
-*.manifest
 *.exp
-*.suo
-*.user
-*.ncb
-*.opensdf
-*.sdf
-*.cache
-*.ipch
-
-# Временные файлы Visual Studio
-Debug/
-Release/
-x64/
-Win32/
-*.vcxproj.filters
-*.vcxproj.user
-*.vcxproj.DotSettings
-*.vcxproj.DotSettings.user
-
-# Файлы отладки
-ipch/
-*.aps
-*.ncb
-*.opendb
-*.opensdf
-*.sdf
-*.suo
-*.user
-*.userosscache
-*.vcxproj.filters
-*.vcxproj.user
-
-# Файлы сборки
-[Rr]elease/
-[Dd]ebug/
-x64/
-[Bb]in/
-[Oo]bj/
-
-# Файлы IntelliSense
-*.ncb
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
+*.manifest
 
 # Файлы предкомпиляции
 *.pch
-*.pdb
+*.ipch
 
-# Файлы от Microsoft Visual Studio
-*.vcxproj.filters
-*.vcxproj.user
-*.vcxproj.DotSettings
-*.vcxproj.DotSettings.user
-
-# Файлы базы данных
-*.db
-*.mdb
-
-# Файлы документации
-*.chm
-*.pdf
-
-# Файлы настроек
-.vs/
-.vscode/
-
-# Игнорировать файлы автосохранения
+# Автосохранение
 *~
 .#*
 
-# Игнорировать файлы логов
+# Логи
 *.log
 
-# Игнорировать файлы с результатами тестирования
+# Тестовые результаты
 TestResult.xml
-
-# Специфичные для проекта файлы (добавить при необходимости)
-# build/
-# dist/
-# *.exe
-# *.dll
