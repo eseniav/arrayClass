@@ -10,7 +10,6 @@ class Array
 {
 private:
 	vector<int> mas;
-	bool isInitialized;
 public:
 	Array();
 	Array(int _size);

@@ -1,8 +1,11 @@
 #include "Array.h"
 
-Array::Array() : isInitialized(false) {}
+Array::Array() {
+    srand(static_cast<unsigned int>(time(NULL)));
+}
 
-Array::Array(int _size) : isInitialized(false) {
+Array::Array(int _size) {
+    srand(static_cast<unsigned int>(time(NULL)));
     Initialize(_size);
 }
 
@@ -29,11 +32,6 @@ double Array::Avg() {
 }
 
 void Array::Initialize(int _size) {
-    if (!isInitialized) {
-        srand(static_cast<unsigned int>(time(NULL)));
-        isInitialized = true;
-    }
-
     mas.resize(_size);
     for (size_t i = 0; i < mas.size(); i++) {
         mas[i] = rand() % 20;
