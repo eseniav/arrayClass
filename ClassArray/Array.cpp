@@ -52,8 +52,40 @@ void Array::PrintCounts() {
     }
 }
 
-/*В класс Array нужно добавить следующие методы:
-1) подсчет среднего значения
-2) перегенерация содержимого массива (возможно придется вынести цикл из конструктора с параметром в отдельный метод)
-3) вывод количества вхождений в массив каждого из чисел, которые в нем находятся
-4) подумать над тем, не проще ли будет использовать вместо поля с массивом vector<int>*/
+void Array::OutputFile(string path) {
+    ofstream f(path);
+
+    if (!f.is_open()) {
+        cout << "Не удалось открыть файл для записи: " << path << endl;
+        return;
+    }
+
+    for (const auto& value : mas) {
+        f << value << ' ';
+    }
+
+    f.close();
+}
+
+void Array::ReadFile(string path) {
+    ifstream f(path);
+
+    if (!f.is_open()) {
+        cout << "Не удалось открыть файл для чтения: " << path << endl;
+        return;
+    }
+
+    int v;
+    while (!f.eof())
+    {
+        f >> v;
+        cout << v << endl;
+        mas.push_back(v);
+    }
+    
+    f.close();
+}
+
+void Array::Clear() {
+    mas.clear();
+}

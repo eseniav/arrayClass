@@ -17,4 +17,8 @@ int main()
     arr.Print();
     cout << arr.Sum() << endl;
     cout << arr.Avg() << endl;
+    arr.OutputFile("test.txt");
+    arr.Clear();
+    arr.ReadFile("test.txt");
+    arr.Print();
 }

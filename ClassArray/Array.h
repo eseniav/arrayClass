@@ -4,6 +4,8 @@
 #include <time.h>
 #include <map>
 #include <vector>
+#include <fstream>
+#include <string>
 using namespace std;
 
 class Array
@@ -20,5 +22,8 @@ public:
 	void SetRandomValues(int _size);
 	void Initialize(int _size);
 	void PrintCounts();
+	void OutputFile(string path);
+	void ReadFile(string path);
+	void Clear();
 };
 
